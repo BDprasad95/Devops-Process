@@ -1,0 +1,22 @@
+publish SSH over .
+
+launch Ec2 machine 
+Install Docker in that instance
+Add Details of Docker instance to Jenkins SSH ove publish plugin
+--------
+Creating Password for Docker Instance (ubuntu)
+Make sure your are a root user [ sudo su - ]
+Go to home Directory 
+Execute this command [ passwd ubuntu ]
+Enter new password 
+---------------
+
+To enable ssh password authentication.
+----------------
+
+vi /etc/ssh/sshd_config
+
+Enable password authentication NO
+       password authentication YES
+
+
