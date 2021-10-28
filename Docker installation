@@ -1,0 +1,17 @@
+//Installing Docker on Ubuntu machine .
+--------------
+Log in to the any available linux machine & execute the following
+
+curl -sSL https://get.docker.com/ | sh
+sudo service docker start
+sudo usermod -aG docker $(id -un)
+----------------
+
+Checking installation
+
+Once you have finished installation on any of the above mentioned Operating Systems apart from Windows7,
+open the terminal (Powershell for Windows) and execute the following commands
+********
+docker version
+docker info
+********
