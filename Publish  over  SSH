@@ -18,5 +18,9 @@ vi /etc/ssh/sshd_config
 
 Enable password authentication NO
        password authentication YES
-
+       
+After this Execute this command
+-----------------------------
+service sshd reload
+-----------------------------
 
