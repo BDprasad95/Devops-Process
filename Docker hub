@@ -1,0 +1,35 @@
+How to docker image to Docker repo usnig CI/CD pipelilne
+
+pipeline {
+        agent any
+
+        environment {
+            dockerImage = ''
+            registry = ''
+            registryCredential = ''
+        }
+        stages{
+            stage('Checkout'){
+                steps{
+                    checkout.....
+                }
+            }
+            stage('BUild docker image'){
+                steps{
+                    script {
+                        dockerImage = docker.BUild registry
+                    }
+                }
+                stage('upload'){
+                    steps{
+                        script{
+                            docker.withRegistry('',registryCredential){
+                                dockerImage.push()
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+}
